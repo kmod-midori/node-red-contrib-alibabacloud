@@ -1,8 +1,12 @@
 {
   "name": "node-red-contrib-alibabacloud",
-  "version": "0.0.1",
-  "description": "",
-  "author": "Harry Cheng <chengyuhui1@gmail.com>",
+  "version": "0.1.0",
+  "description": "Alibaba cloud (aliyun) nodes for Node-RED",
+  "author": {
+    "name": "Harry Cheng",
+    "email": "chengyuhui1@gmail.com"
+  },
+  "keywords": [ "node-red" ],
   "license": "MIT",
   "dependencies": {
     "alibabacloud-iot-device-sdk": "^1.2.8"
@@ -14,5 +18,12 @@
       "property": "nodes/property.js",
       "event": "nodes/event.js"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chengyuhui/node-red-contrib-alibabacloud.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chengyuhui/node-red-contrib-alibabacloud/issues"
   }
 }
