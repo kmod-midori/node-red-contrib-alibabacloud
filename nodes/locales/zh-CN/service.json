@@ -1,0 +1,14 @@
+{
+  "label": {
+    "device": "设备",
+    "service_name": "服务名",
+    "aliyun_service_in": "阿里云服务调用",
+    "aliyun_service_reply": "阿里云服务调用返回值",
+    "service_call": "服务调用",
+    "service_call_reply": "服务调用返回",
+    "alibaba_cloud": "阿里云"
+  },
+  "status": {
+    "no_device": "未选择设备"
+  }
+}

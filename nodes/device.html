@@ -1,0 +1,35 @@
+<script type="text/javascript">
+  RED.nodes.registerType("alibabacloud-device", {
+    category: "config",
+    defaults: {
+      device_name: { value: "", required: true },
+      region: { value: "cn-shanghai", required: true},
+    },
+    credentials: {
+      product_key: { type: "text" },
+      device_secret: { type: "text" },
+    },
+    label: function () {
+      return this.device_name;
+    },
+  });
+</script>
+
+<script type="text/html" data-template-name="alibabacloud-device">
+  <div class="form-row">
+    <label for="node-config-input-device_name"><i class="icon-bookmark"></i> <span data-i18n="label.device_name"></span></label>
+    <input type="text" id="node-config-input-device_name"/>
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-region"><i class="icon-bookmark"></i> <span data-i18n="label.region"></span></label>
+    <input type="text" id="node-config-input-region"/>
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-product_key"><i class="icon-bookmark"></i> productKey</label>
+    <input type="text" id="node-config-input-product_key"/>
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-device_secret"><i class="icon-bookmark"></i> deviceSecret</label>
+    <input type="text" id="node-config-input-device_secret"/>
+  </div>
+</script>

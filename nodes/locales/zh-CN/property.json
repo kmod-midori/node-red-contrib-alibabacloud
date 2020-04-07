@@ -1,0 +1,10 @@
+{
+  "label": {
+    "prop_set_req": "属性设置请求",
+    "prop_post": "属性上报",
+    "aliyun_prop_set_req": "阿里云属性设置请求",
+    "aliyun_prop_post": "阿里云属性上报",
+    "property": "属性",
+    "device": "设备"
+  }
+}

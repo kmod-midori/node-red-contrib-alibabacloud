@@ -1,0 +1,40 @@
+<script type="text/javascript">
+  RED.nodes.registerType("alibabacloud-event-post", {
+    category: RED._("node-red-contrib-alibabacloud/service:label.alibaba_cloud"),
+    color: "#a6bbcf",
+    defaults: {
+      name: {
+        value: "",
+      },
+      device: {
+        type: "alibabacloud-device",
+        required: true,
+      },
+      event: {
+        value: null,
+      },
+    },
+    icon: 'arrow-out.png',
+    inputs: 1,
+    outputs: 0,
+    paletteLabel: RED._("node-red-contrib-alibabacloud/event:label.event_post"),
+    label: function () {
+      return this.name || RED._("node-red-contrib-alibabacloud/event:label.aliyun_event_post");
+    },
+  });
+</script>
+
+<script type="text/html" data-template-name="alibabacloud-event-post">
+  <div class="form-row">
+      <label for="node-input-name"><i class="icon-tag"></i> <span data-i18n="node-red:common.label.name"></span></label>
+      <input type="text" id="node-input-name" data-i18n="[placeholder]node-red:common.label.name">
+  </div>
+  <div class="form-row">
+    <label for="node-input-device"><i class="fa fa-globe"></i> <span data-i18n="label.device"></span></label>
+    <input type="text" id="node-input-device">
+  </div>
+  <div class="form-row">
+    <label for="node-input-event"><span data-i18n="label.event_name"></span></label>
+    <input type="text" id="node-input-event">
+  </div>
+</script>

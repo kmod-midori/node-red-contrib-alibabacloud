@@ -1,0 +1,61 @@
+<script type="text/javascript">
+  RED.nodes.registerType("alibabacloud-service", {
+    category: RED._("node-red-contrib-alibabacloud/service:label.alibaba_cloud"),
+    color: "#a6bbcf",
+    defaults: {
+      name: {
+        value: "",
+      },
+      device: {
+        type: "alibabacloud-device",
+        required: true,
+      },
+      service: { value: null, required: true },
+    },
+    icon: 'arrow-in.png',
+    inputs: 0,
+    outputs: 1,
+    paletteLabel: RED._("node-red-contrib-alibabacloud/service:label.service_call"),
+    label: function () {
+      return this.name || RED._("node-red-contrib-alibabacloud/service:label.aliyun_service_in");
+    },
+  });
+  RED.nodes.registerType("alibabacloud-service-reply", {
+    category: RED._("node-red-contrib-alibabacloud/service:label.alibaba_cloud"),
+    color: "#a6bbcf",
+    defaults: {
+      name: {
+        value: "",
+      },
+    },
+    icon: 'arrow-out.png',
+    inputs: 1,
+    outputs: 0,
+    paletteLabel: RED._("node-red-contrib-alibabacloud/service:label.service_call_reply"),
+    label: function () {
+      return this.name || RED._("node-red-contrib-alibabacloud/service:label.aliyun_service_reply");
+    },
+  });
+</script>
+
+<script type="text/html" data-template-name="alibabacloud-service">
+  <div class="form-row">
+      <label for="node-input-name"><i class="icon-tag"></i> <span data-i18n="node-red:common.label.name"></span></label>
+      <input type="text" id="node-input-name" data-i18n="[placeholder]node-red:common.label.name">
+  </div>
+  <div class="form-row">
+    <label for="node-input-device"><i class="fa fa-globe"></i> <span data-i18n="label.device"></span></label>
+    <input type="text" id="node-input-device">
+  </div>
+  <div class="form-row">
+    <label for="node-input-service"><span data-i18n="label.service_name"></span></label>
+    <input type="text" id="node-input-service">
+  </div>
+</script>
+
+<script type="text/html" data-template-name="alibabacloud-service-reply">
+  <div class="form-row">
+      <label for="node-input-name"><i class="icon-tag"></i> <span data-i18n="node-red:common.label.name"></span></label>
+      <input type="text" id="node-input-name" data-i18n="[placeholder]node-red:common.label.name">
+  </div>
+</script>
