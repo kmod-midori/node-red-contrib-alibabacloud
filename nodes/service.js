@@ -46,7 +46,7 @@ module.exports = function (RED) {
             data: msg.payload
           };
           this.log("Send reply: " + JSON.stringify(reply));
-          msg.reply(reply, 'async');
+          msg._reply(reply, 'async');
         }
         done();
       });
