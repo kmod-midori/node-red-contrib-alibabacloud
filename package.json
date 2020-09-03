@@ -16,7 +16,8 @@
       "device": "nodes/device.js",
       "service": "nodes/service.js",
       "property": "nodes/property.js",
-      "event": "nodes/event.js"
+      "event": "nodes/event.js",
+      "shadow": "nodes/shadow.js"
     }
   },
   "repository": {
