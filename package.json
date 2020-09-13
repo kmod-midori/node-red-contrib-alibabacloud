@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-alibabacloud",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Alibaba cloud (aliyun) nodes for Node-RED",
   "author": {
     "name": "Harry Cheng",
@@ -16,7 +16,8 @@
       "device": "nodes/device.js",
       "service": "nodes/service.js",
       "property": "nodes/property.js",
-      "event": "nodes/event.js"
+      "event": "nodes/event.js",
+      "shadow": "nodes/shadow.js"
     }
   },
   "repository": {

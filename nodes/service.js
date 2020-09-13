@@ -33,6 +33,7 @@ module.exports = function (RED) {
       }
     }
   }
+
   RED.nodes.registerType("alibabacloud-service", ServiceNode);
 
   class ServiceReplyNode extends common.RedNode {
@@ -45,12 +46,16 @@ module.exports = function (RED) {
             code: msg.code || 200,
             data: msg.payload
           };
+
+          // Support synchronous (RRPC) and asynchronous response
+          let isSync = msg.sync || false;
           this.log("Send reply: " + JSON.stringify(reply));
-          msg.reply(reply, 'async');
+          msg._reply(reply, isSync ? 'sync' : 'async');
         }
         done();
       });
     }
   }
+
   RED.nodes.registerType("alibabacloud-service-reply", ServiceReplyNode);
 };

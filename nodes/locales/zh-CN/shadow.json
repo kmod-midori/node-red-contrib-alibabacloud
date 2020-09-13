@@ -1,0 +1,10 @@
+{
+  "label": {
+    "shadow_set_req": "监听影子变更",
+    "shadow_post": "影子状态上报",
+    "aliyun_shadow_set_req": "云端设置设备端影子",
+    "aliyun_shadow_post": "设备端更新云端影子",
+    "shadow": "影子",
+    "device": "设备"
+  }
+}

@@ -1,0 +1,65 @@
+<script type="text/javascript">
+  RED.nodes.registerType("alibabacloud-shadow-set", {
+    category: RED._("node-red-contrib-alibabacloud/service:label.alibaba_cloud"),
+    color: "#a6bbcf",
+    defaults: {
+      name: {
+        value: "",
+      },
+      device: {
+        type: "alibabacloud-device",
+        required: true,
+      },
+      // property: { value: null, required: true },
+    },
+    icon: 'arrow-in.png',
+    inputs: 0,
+    outputs: 1,
+    paletteLabel: RED._("node-red-contrib-alibabacloud/shadow:label.shadow_set_req"),
+    label: function () {
+      return this.name || RED._("node-red-contrib-alibabacloud/shadow:label.aliyun_shadow_set_req");
+    },
+  });
+  RED.nodes.registerType("alibabacloud-shadow-post", {
+    category: RED._("node-red-contrib-alibabacloud/service:label.alibaba_cloud"),
+    color: "#a6bbcf",
+    defaults: {
+      name: {
+        value: "",
+      },
+      device: {
+        type: "alibabacloud-device",
+        required: true,
+      },
+    },
+    icon: 'arrow-out.png',
+    inputs: 1,
+    outputs: 0,
+    paletteLabel: RED._("node-red-contrib-alibabacloud/shadow:label.shadow_post"),
+    label: function () {
+      return this.name || RED._("node-red-contrib-alibabacloud/shadow:label.aliyun_shadow_post");
+    },
+  });
+</script>
+
+<script type="text/html" data-template-name="alibabacloud-shadow-set">
+  <div class="form-row">
+      <label for="node-input-name"><i class="icon-tag"></i> <span data-i18n="node-red:common.label.name"></span></label>
+      <input type="text" id="node-input-name" data-i18n="[placeholder]node-red:common.label.name">
+  </div>
+  <div class="form-row">
+    <label for="node-input-device"><i class="fa fa-globe"></i> <span data-i18n="label.device"></span></label>
+    <input type="text" id="node-input-device">
+  </div>
+</script>
+
+<script type="text/html" data-template-name="alibabacloud-shadow-post">
+  <div class="form-row">
+      <label for="node-input-name"><i class="icon-tag"></i> <span data-i18n="node-red:common.label.name"></span></label>
+      <input type="text" id="node-input-name" data-i18n="[placeholder]node-red:common.label.name">
+  </div>
+  <div class="form-row">
+    <label for="node-input-device"><i class="fa fa-globe"></i> <span data-i18n="label.device"></span></label>
+    <input type="text" id="node-input-device">
+  </div>
+</script>
